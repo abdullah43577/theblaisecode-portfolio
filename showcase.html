@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>TheBlaiseCode - Dev Portfolio - Blaise Nwachukwu</title>
+      <link
+         rel="shortcut icon"
+         href="./assets/img/favicon.png"
+         type="image/x-icon"
+      />
+      <!-- ---------------------- Fontaewsome & Typography ---------------------- -->
+      <link rel="stylesheet" href="./css/fontawesome-v6.3.0/css/all.css" />
+      <link rel="stylesheet" href="./css/typography/typo-fonts.css" />
+
+      <!-- ---------------------- External CSS Styling ---------------------- -->
+      <!-- <link rel="stylesheet" href="./css/normalize.css" /> -->
+      <link rel="stylesheet" href="./css/style.css" />
+      <link rel="stylesheet" href="./css/responsive.css" />
+   </head>
+   <body data-theme="dark" id="home" class="">
+      <main class="background">
+         <!-- ---------------------- Back to top button ---------------------- -->
+         <a href="#home" class="scroll-top"
+            ><i class="fa-solid fa-caret-up"></i>
+         </a>
+
+         <!-- ---------------------- Sticky social icons ---------------------- -->
+         <div id="sticky-sidebar">
+            <a href="https://github.com/theblaisecode" target="_blank">
+               <i id="github" class="fa-brands fa-github fa-xl"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/theblaisecode" target="_blank">
+               <i class="fa-brands fa-linkedin fa-xl"></i>
+            </a>
+            <a href="https://codepen.io/theblaisecode" target="_blank">
+               <i class="fa-brands fa-codepen fa-xl"></i>
+            </a>
+            <a href="https://twitter.com/theblaisecode" target="_blank">
+               <i class="fa-brands fa-twitter fa-xl"></i>
+            </a>
+            <a href="https://instagram.com/theblaisecode" target="_blank">
+               <i class="fa-brands fa-instagram fa-xl"></i>
+            </a>
+         </div>
+
+         <!-- ---------------------- Section Header ---------------------- -->
+         <header>
+            <div class="container">
+               <div class="headerContent">
+                  <!-- ---------------------- Logo ---------------------- -->
+                  <div class="contentTop">
+                     <a href="./index.html">
+                        <img
+                           class="logoZoro"
+                           src="./assets/img/anime/zoro.png"
+                           alt=""
+                        />
+                        <img
+                           id="logo-dark-theme"
+                           class="logoWhite"
+                           src="./assets/img/TheBlaiseCodewhite.svg"
+                           alt="logo white"
+                        />
+                        <img
+                           id="logo-white-theme"
+                           class="logoBlack"
+                           src="./assets/img/TheBlaiseCodeblack.svg"
+                           alt="logo dark"
+                        />
+                     </a>
+                  </div>
+
+                  <!-- ---------------------- Navigation Menu ---------------------- -->
+                  <nav class="contentBotom">
+                     <ul class="navbar">
+                        <li><a href="./index.html">Home</a></li>
+                        <li>
+                           <button class="menuButton" id="aboutPopUpModal">
+                              About Me
+                           </button>
+                        </li>
+                        <li><a href="./index.html#projects">Projects</a></li>
+                        <li>
+                           <a href="./showcase.html" class="active">Showcase</a>
+                        </li>
+                        <li><a href="./contact.html">Contact</a></li>
+
+                        <!-- ---------------------- TOGGLE light and dark theme ------------------------>
+                        <li id="jstoggle">
+                           <input
+                              type="checkbox"
+                              class="checkbox"
+                              id="checkbox"
+                           />
+                           <label for="checkbox" class="checkbox-label">
+                              <i class="fas fa-moon"></i>
+                              <i class="fas fa-sun"></i>
+                              <span class="ball"></span>
+                           </label>
+                        </li>
+                     </ul>
+                  </nav>
+
+                  <!-- ---------------------- Mobile menu ---------------------- -->
+                  <div class="mobile-menu-icon">
+                     <div class="line1"></div>
+                     <div class="line2"></div>
+                     <div class="line3"></div>
+                  </div>
+               </div>
+            </div>
+         </header>
+
+         <!-- ---------------------- Section: Welcome to my Showcase ---------------------- -->
+         <section id="showcase">
+            <div class="container2">
+               <div class="showcaseContent">
+                  <div class="contentTop">
+                     <h2 class="heading">Welcome to my Showcase!</h2>
+                     <!-- <p>Here are projects that aren't in the featured sections.</p> -->
+                  </div>
+                  <div class="contentBottom">
+                     <div class="grid">
+                        <div class="box">
+                           <a
+                              href="https://teddythecreator.netlify.app/"
+                              target="_blank"
+                              class="wrapper"
+                           >
+                              <img
+                                 src="./assets/img/work/teddy.png"
+                                 alt="project image"
+                                 class="boxImage"
+                              />
+                              <div class="boxImgText">
+                                 <span class="boxTitle">Teddy the Creator</span>
+                                 <div class="boxTools">
+                                    <small>HTML</small>
+                                    <small>CSS</small>
+                                    <small>JavaScript</small>
+                                 </div>
+                              </div>
+                           </a>
+                           <div class="boxName">
+                              <a
+                                 href="https://teddythecreator.netlify.app/"
+                                 target="_blank"
+                                 class="boxDescription"
+                                 >UX/UI Design Portfolio</a
+                              >
+                              <div class="boxBtn">
+                                 <a class="live btn" href="" target="_blank">
+                                    <i class="fa-solid fa-globe"></i>
+                                    Live
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="box">
+                           <a href="https://theblaisecode.github.io/Studio-L-art/" target="_blank">
+                              <img src="./assets/img/work/studio.png" alt="project image" class="boxImage"/>
+                              <div class="boxImgText">
+                                 <span class="boxTitle">Studio L'Art </span>
+                                 <div class="boxTools">
+                                    <small>HTML</small>
+                                    <small>CSS</small>
+                                    <small>JavaScript</small>
+                                 </div>
+                              </div>
+                           </a>
+                           <div class="boxName">
+                              <a href="https://theblaisecode.github.io/Studio-L-art/" target="_blank" class="boxDescription">
+                                 Gallery of Arts & Histories
+                              </a>
+                              <div class="boxBtn">
+                                 <a class="repo btn" href="https://github.com/theblaisecode/Studio-L-art/" target="_blank">
+                                    <i id="github" class="fa-brands fa-github fa-1x"></i>
+                                    Repo
+                                 </a>
+                                 <a class="live btn" href="https://theblaisecode.github.io/Studio-L-art/" target="_blank"
+                                 >
+                                    <i class="fa-solid fa-globe"></i>
+                                    Live
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="box">
+                           <a
+                              href="https://theblaisecode.github.io/Crave/"
+                              target="_blank"
+                           >
+                              <img
+                                 src="./assets/img/work/crave.png"
+                                 alt="project image"
+                                 class="boxImage"
+                              />
+                              <div class="boxImgText">
+                                 <span class="boxTitle">Crave</span>
+                                 <div class="boxTools">
+                                    <small>HTML</small>
+                                    <small>CSS</small>
+                                    <small>JavaScript</small>
+                                 </div>
+                              </div>
+                           </a>
+                           <div class="boxName">
+                              <a
+                                 href="https://theblaisecode.github.io/Crave/"
+                                 target="_blank"
+                                 class="boxDescription"
+                                 >Restaurant Website</a
+                              >
+                              <div class="boxBtn">
+                                 <a
+                                    class="repo btn"
+                                    href="https://github.com/theblaisecode/Studio-L-art/"
+                                    target="_blank"
+                                 >
+                                    <i
+                                       id="github"
+                                       class="fa-brands fa-github fa-1x"
+                                    ></i>
+                                    Repo
+                                 </a>
+                                 <a
+                                    class="live btn"
+                                    href="https://theblaisecode.github.io/Studio-L-art/"
+                                    target="_blank"
+                                 >
+                                    <i class="fa-solid fa-globe"></i>
+                                    Live
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="box comingSoon">
+                           <a
+                              href="https://theblaisecode.github.io/Anime-Project/"
+                              target="_blank"
+                           >
+                              <img
+                                 src="./assets/img/work/anime.png"
+                                 alt="project image"
+                                 class="boxImage"
+                              />
+                              <div class="boxImgText">
+                                 <span class="boxTitle">Anime Verse</span>
+                                 <div class="boxTools">
+                                    <small>HTML</small>
+                                    <small>CSS</small>
+                                    <small>JavaScript</small>
+                                 </div>
+                              </div>
+                           </a>
+                           <div class="boxName">
+                              <a
+                                 href="https://theblaisecode.github.io/Anime-Project/"
+                                 target="_blank"
+                                 class="boxDescription"
+                              >
+                                 Anime Selection Deck</a
+                              >
+                              <div class="boxBtn">
+                                 <a
+                                    class="repo btn"
+                                    href="https://github.com/theblaisecode/Studio-L-art/"
+                                    target="_blank"
+                                 >
+                                    <i
+                                       id="github"
+                                       class="fa-brands fa-github fa-1x"
+                                    ></i>
+                                    Repo
+                                 </a>
+                                 <a
+                                    class="live btn"
+                                    href="https://theblaisecode.github.io/Studio-L-art/"
+                                    target="_blank"
+                                 >
+                                    <i class="fa-solid fa-globe"></i>
+                                    Live
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="box comingSoon">
+                           <a
+                              href="https://theblaisecode.github.io/Anime-Project/"
+                              target="_blank"
+                           >
+                              <img
+                                 src="./assets/img/work/gods-and-myths.png"
+                                 alt="project image"
+                                 class="boxImage"
+                              />
+                              <div class="boxImgText">
+                                 <span class="boxTitle">Gods and Myths</span>
+                                 <div class="boxTools">
+                                    <small>HTML</small>
+                                    <small>CSS</small>
+                                    <small>JavaScript</small>
+                                 </div>
+                              </div>
+                           </a>
+                           <div class="boxName">
+                              <a
+                                 href="https://theblaisecode.github.io/Anime-Project/"
+                                 target="_blank"
+                                 class="boxDescription"
+                                 >Deities, Myths & Folklores</a
+                              >
+                              <div class="boxBtn">
+                                 <a
+                                    class="repo btn"
+                                    href="https://github.com/theblaisecode/Studio-L-art/"
+                                    target="_blank"
+                                 >
+                                    <i
+                                       id="github"
+                                       class="fa-brands fa-github fa-1x"
+                                    ></i>
+                                    Repo
+                                 </a>
+                                 <a
+                                    class="live btn"
+                                    href="https://theblaisecode.github.io/Studio-L-art/"
+                                    target="_blank"
+                                 >
+                                    <i class="fa-solid fa-globe"></i>
+                                    Live
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="box comingSoon">
+                           <a
+                              href="https://theblaisecode.github.io/Anime-Project/"
+                              target="_blank"
+                           >
+                              <img
+                                 src="./assets/img/work/tattoo-web.png"
+                                 alt="project image"
+                                 class="boxImage"
+                              />
+                              <div class="boxImgText">
+                                 <span class="boxTitle">Pharaoh Tattoos</span>
+                                 <div class="boxTools">
+                                    <small>HTML</small>
+                                    <small>CSS</small>
+                                    <small>JavaScript</small>
+                                 </div>
+                              </div>
+                           </a>
+                           <div class="boxName">
+                              <a
+                                 href="https://theblaisecode.github.io/Anime-Project/"
+                                 target="_blank"
+                                 class="boxDescription"
+                                 >Custom Tattoos & Piercings</a
+                              >
+                              <div class="boxBtn">
+                                 <a
+                                    class="repo btn"
+                                    href="https://github.com/theblaisecode/Studio-L-art/"
+                                    target="_blank"
+                                 >
+                                    <i
+                                       id="github"
+                                       class="fa-brands fa-github fa-1x"
+                                    ></i>
+                                    Repo
+                                 </a>
+                                 <a
+                                    class="live btn"
+                                    href="https://theblaisecode.github.io/Studio-L-art/"
+                                    target="_blank"
+                                 >
+                                    <i class="fa-solid fa-globe"></i>
+                                    Live
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- -------------------------------------- PopUp: About Me ----------------------------- -->
+         <section id="popUp" class="overlay">
+            <div class="container head">
+               <a class="aboutLogo" href="./index.html">
+                  <img
+                     class="logoZoro"
+                     src="./assets/img/anime/zoro.png"
+                     alt=""
+                  />
+                  <img
+                     id="logo-dark-popup"
+                     class="logoWhite"
+                     src="./assets/img/TheBlaiseCodewhite.svg"
+                     alt="logo white"
+                  />
+               </a>
+               <div class="closeModalButton">
+                  <i class="icon fa-solid fa-xmark"></i>
+               </div>
+            </div>
+
+            <div class="container2">
+               <div class="popUpContent">
+                  <div class="contentTop">
+                     <img
+                        src="./assets/img/me-big-smile.png"
+                        alt="Blaise"
+                        class="popUpImage"
+                     />
+                  </div>
+                  <div class="contentBottom">
+                     <h2>Who is Blaise?</h2>
+                     <h3 class="jobTitle">Software Engineer - Frontend</h3>
+                     <p>
+                        I'm a Creative Front-End Engineer, i love puzzles
+                        <img src="./assets/img/gif/puzzle.png" alt="" />, video
+                        games <img src="./assets/img/gif/game.gif" alt="" />, bikes
+                        <img src="./assets/img/gif/bike.gif" alt="" />
+                        and as you can probably tell, i love anime
+                        <img src="./assets/img/gif/anime.gif" alt="" />
+                        as well...
+                        <img src="./assets/img/gif/wink-face.gif" alt="" />
+                     </p>
+
+                     <p>
+                        I specialize in building human-centred programs that are
+                        responsive, intuitive, and visually appealing. Having
+                        worked on several projects and seen how technology can
+                        help people, I believe that technology has the power to
+                        create meaningful changes, and I am always looking for
+                        ways to leverage the latest innovations to build
+                        softwares that are both effective and user-friendly. I'm
+                        an open & very easy person to work with.
+                     </p>
+                     <p>
+                        When I'm not behind my screens, you can catch me solving
+                        puzzle games, watching amine/k-dramas, playing video
+                        games, daydreaming and giving various hobbies a whirl
+                        (most recently balloon animal twisting)
+                        <img src="./assets/img/gif/smile-eyes.gif" alt="" />.
+                     </p>
+                     
+                     <div class="popUpsocial">
+                        <ul>
+                           <li>
+                              <a
+                                 href="https://github.com/theblaisecode"
+                                 target="_blank"
+                              >
+                                 <i
+                                    id="github"
+                                    class="fa-brands fa-github fa-2x"
+                                 ></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a
+                                 href="https://www.linkedin.com/in/theblaisecode"
+                                 target="_blank"
+                              >
+                                 <i class="fa-brands fa-linkedin fa-2x"></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a
+                                 href="https://codepen.io/theblaisecode"
+                                 target="_blank"
+                              >
+                                 <i class="fa-brands fa-codepen fa-2x"></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a
+                                 href="https://twitter.com/theblaisecode"
+                                 target="_blank"
+                              >
+                                 <i class="fa-brands fa-twitter fa-2x"></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a
+                                 href="https://instagram.com/theblaisecode"
+                                 target="_blank"
+                              >
+                                 <i class="fa-brands fa-instagram fa-2x"></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a
+                                 href="./contact.html"
+                                 target="_blank"
+                              >
+                                 <i class="fa-solid fa-envelope fa-2x"></i>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- ---------------------- Section: Main Footer  ---------------------- -->
+         <section id="mainFooter">
+            <div class="container3">
+               <div class="mainFooterContent">
+                  <div class="contentTop">
+                     <p><span class="highlight">.</span>Let's work together</p>
+                  </div>
+                  <div class="contentBottom">
+                     <h2>
+                        I am currently open to full-time, contract or part-time
+                        opportunities in Front-End Engineering.
+                     </h2>
+                     <div class="social">
+                        <ul>
+                           <li>
+                              <a
+                                 href="https://github.com/theblaisecode"
+                                 target="_blank"
+                              >
+                                 <i
+                                    id="github"
+                                    class="fa-brands fa-github fa-2x"
+                                 ></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a
+                                 href="https://www.linkedin.com/in/theblaisecode"
+                                 target="_blank"
+                              >
+                                 <i class="fa-brands fa-linkedin fa-2x"></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a
+                                 href="https://codepen.io/theblaisecode"
+                                 target="_blank"
+                              >
+                                 <i class="fa-brands fa-codepen fa-2x"></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a
+                                 href="https://twitter.com/theblaisecode"
+                                 target="_blank"
+                              >
+                                 <i class="fa-brands fa-twitter fa-2x"></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a
+                                 href="https://instagram.com/theblaisecode"
+                                 target="_blank"
+                              >
+                                 <i class="fa-brands fa-instagram fa-2x"></i>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- ---------------------- Section: Sub Footer  ---------------------- -->
+         <section id="subFooter">
+            <div class="container2">
+               <div class="subFooterContent">
+                  <div class="contentTop">
+                     <p>
+                        TheBlaise<span class="highlight">Code</span> &copy;
+                        <span id="today-date"></span> All Right reserved
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+
+      <!-- ---------------------------------- JS Link ---------------------------------- -->
+      <script src="./js/main.js"></script>
+   </body>
+</html>

@@ -1,0 +1,1066 @@
+/* Pixel to REM COnverter -- https://nekocalc.com/px-to-rem-converter */
+/* Anything body[data-theme="dark"] is for dark theme */
+
+/* ---------------------- Color ---------------------- */
+:root {
+   --mainColor: #3f5732;
+   --secondaryColor: #87ae73;
+   --white: #fff;
+   --whiteOpacity: #ffffffbb;
+   --offWhite: #ffffffd5;
+   --lightGray: #515251;
+}
+
+/* ---------------------- Reset ---------------------- */
+* {
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+}
+
+/* Scroll Bar */
+html::-webkit-scrollbar {
+   width: 0.8rem;
+   background: #3f573265;
+}
+
+html::-webkit-scrollbar-thumb {
+   background: var(--mainColor);
+   border-radius: 1rem;
+}
+
+/* ---------------------- General Styling ---------------------- */
+
+/* Default dark theme */
+body[data-theme="dark"] {
+   font-family: "Inter", sans-serif;
+   font-size: 1rem;
+   font-weight: 400;
+   line-height: 1.5;
+   margin: 0;
+   background-color: #000;
+   color: #fff;
+}
+
+/* Light theme */
+body[data-theme="light"] {
+   font-family: "Inter", sans-serif;
+   font-size: 1rem;
+   font-weight: 400;
+   line-height: 1.5;
+   margin: 0;
+   color: #000;
+}
+
+/* ---------------------- Container ---------------------- */
+.container {
+   margin: auto;
+   width: 97%;
+}
+
+.container2 {
+   margin: auto;
+   width: 70%;
+}
+
+.container3 {
+   margin: auto;
+   width: 55%;
+}
+
+p {
+   font-size: 1.1875rem;
+}
+
+a {
+   text-decoration: none;
+   cursor: pointer;
+}
+
+ul {
+   margin: 0;
+}
+
+li {
+   list-style: none;
+}
+
+/* ---------------------- Button ---------------------- */
+.btn {
+   color: var(--white);
+   padding: 1.45rem 2.5rem;
+   border-radius: 5rem;
+   text-transform: uppercase;
+   font-weight: 700;
+   font-size: 0.9rem;
+   letter-spacing: 1.63px;
+   transition: all 0.4s;
+}
+
+.btn:hover {
+   box-shadow: 0 32px 54px rgba(3, 3, 3, 0.12);
+   transform: translateY(-8px);
+   transition: all 0.4s;
+}
+
+body[data-theme="dark"] .btn:hover {
+   box-shadow: 0 32px 54px rgba(66, 117, 25, 0.562);
+   transform: translateY(-8px);
+   transition: all 0.4s;
+}
+
+button {
+   cursor: pointer;
+}
+
+.highlight {
+   color: var(--secondaryColor);
+}
+
+/* ---------------------- Layout Styling ---------------------- */
+/* Dark Theme bg*/
+body[data-theme="dark"] .background {
+   background: url(../assets/img/bg/anime-pattern-dark-theme.svg) no-repeat
+      fixed;
+   /* background: url(../assets/img/bg/anime-pattern-dark-theme.svg) no-repeat top left/cover fixed; */
+   width: 100%;
+}
+
+/* Light Theme bg*/
+body[data-theme="light"] .background {
+   background: url(../assets/img/bg/anime-pattern-light-theme.svg) no-repeat
+      fixed;
+   /* background: url(../assets/img/bg/anime-pattern-light-theme.svg) no-repeat top left/cover  fixed; */
+   width: 100%;
+}
+
+/* ---------------------- Header ---------------------- */
+
+header {
+   z-index: 1;
+   padding: 1.2rem 0;
+}
+
+.headerContent,
+.headerContent .contentTop a {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.headerContent,
+.headerContent .contentBottom {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+/* ---------------------- Logo ---------------------- */
+.logoZoro {
+   width: 3.75rem;
+   margin-right: 1.3rem;
+}
+
+.logoWhite,
+.logoBlack {
+   width: 10.625rem;
+}
+
+/* ---------------------- light dark theme logo ---------------------- */
+.remove {
+   display: none;
+}
+
+/* dark theme */
+body[data-theme="dark"] #logo-white-theme {
+   display: none;
+}
+
+/* light theme */
+body[data-theme="light"] #logo-dark-theme {
+   display: none;
+}
+
+/* ---------------------- navbar ---------------------- */
+.navbar {
+   display: flex;
+   align-items: center;
+}
+
+.navbar a,
+.menuButton {
+   color: #000;
+   text-align: center;
+   margin: 0 1rem;
+   font-size: 0.95rem;
+   font-weight: 700;
+}
+
+/* Dark theme */
+body[data-theme="dark"] .navbar a,
+body[data-theme="dark"] .menuButton {
+   color: var(--white);
+}
+
+.menuButton {
+   padding: 0;
+   background: none;
+   outline: none;
+   border: none;
+}
+
+.navbar a:hover,
+.navbar a.active,
+body[data-theme="dark"] .navbar a:hover,
+body[data-theme="dark"] .navbar a.active,
+.menuButton:hover,
+body[data-theme="dark"] .menuButton:hover {
+   color: var(--secondaryColor);
+   transition: linear 0.2s all;
+}
+
+/* ---------------------- Mobile nav ---------------------- */
+.mobile-menu-icon {
+   display: none;
+   cursor: pointer;
+   z-index: 2;
+   transition: 0.4s;
+}
+
+/* Hamburger menu */
+.mobile-menu-icon div {
+   display: block;
+   background: #000;
+   height: 0.1849rem;
+   width: 1.4rem;
+   margin-bottom: 0.2rem;
+   border-radius: 0.5rem;
+   transition: 0.4s all;
+}
+
+body[data-theme="dark"] .mobile-menu-icon div {
+   background: var(--whiteOpacity);
+}
+
+/* Hamburger menu animation on click*/
+.move .line1 {
+   transform: rotate(-45deg) translate(-0.03rem, 0.5rem);
+}
+
+.move .line2 {
+   opacity: 0;
+}
+
+.move .line3 {
+   transform: rotate(45deg) translate(-0.03rem, -0.5rem);
+}
+
+/* ---------------------- Section: Hero Styling ---------------------- */
+#hero {
+   margin: 8rem auto;
+   text-align: center;
+   /* height: 100vh; */
+}
+
+/* Hero center img */
+.heroContent .contentTop .heroImg {
+   width: 7.5rem;
+   margin-bottom: 0.8rem;
+}
+
+.introText {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* hero Intro */
+.heroContent p,
+#mainFooter p,
+#subFooter p {
+   text-align: center;
+   text-transform: uppercase;
+   font-weight: 700;
+   font-size: 0.8rem;
+   letter-spacing: 1.63px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.heroContent p span.highlight,
+.heroContent img {
+   margin-left: 0.3rem;
+}
+
+/* hero waving hand */
+.heroContent img {
+   display: inline-block;
+   width: 2rem;
+}
+
+/* Hero Big text */
+.heroContent .contentBottom h1.big-text {
+   text-align: center;
+   font-weight: 700;
+   font-size: 3.75rem;
+   letter-spacing: -1.6px;
+   line-height: 1.2;
+   margin: 2.8rem 0;
+   padding-bottom: 2.5rem;
+}
+
+/* Hero button */
+.heroContent .heroButton {
+   display: flex;
+   justify-content: center;
+   gap: 4rem;
+}
+
+.heroContent .heroButton a,
+.heroContent .heroButton button {
+   background: var(--mainColor);
+   outline: none;
+   border: none;
+}
+
+.heroContent .heroButton a:hover,
+.heroContent .heroButton button:hover {
+   background: var(--secondaryColor);
+}
+
+.icon {
+   margin-right: 0.8rem;
+}
+
+/* ---------------------- Section: Intro Styling ---------------------- */
+#Intro {
+   padding-top: 6.25rem;
+}
+
+.introContent p,
+#contact .contentBottom p,
+#popUp p {
+   text-align: center;
+   font-size: 1.3125rem;
+   letter-spacing: -0.5px;
+   line-height: 1.5;
+   margin: 0;
+   padding: 0 2rem;
+}
+
+/* ---------------------- Section: Projects Styling ---------------------- */
+#projects {
+   padding-top: 6.25rem;
+}
+
+#projects .contentTop .heading,
+#showcase .contentTop .heading,
+#contact .contentTop .heading,
+#popUp h2 {
+   text-align: center;
+   padding: 3.125rem 0;
+   font-size: 3rem;
+   letter-spacing: -1.8px;
+   line-height: 1.25;
+   margin: 0 0 1rem 0;
+}
+
+/* progect arraingment */
+.grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 5rem 2rem;
+}
+
+.box {
+   display: block;
+   position: relative;
+   z-index: 1;
+   transition: 0.4s;
+}
+
+.box > a {
+   position: relative;
+   display:block;
+   width: 100%;
+}
+
+/* whole hover animation */
+.box:hover img {
+   border-radius: 1.5rem;
+   transition: 0.4s;
+}
+
+.box:hover .boxImgText {
+   border-radius: 1.5rem;
+   transition: 0.4s;
+   opacity: 1;
+}
+
+.box:hover .boxImgText > * {
+   transform: translateY(0);
+}
+
+.box.comingSoon:hover img {
+   transform: none;
+   border-radius: 1.5rem;
+   cursor: wait;
+   box-shadow: 12px 12px 54px 0.5px rgba(3, 3, 3, 0.192);
+   transition: 0.4s;
+}
+
+/* whole hover animation Dark theme  */
+body[data-theme="dark"] .box.comingSoon:hover img {
+   box-shadow: 12px 12px 54px 0.5px rgba(66, 117, 25, 0.404);
+}
+
+.boxImage {
+   width: 100%;
+   height: 100%;
+   transition: 0.4s;
+}
+
+/* only project image hover animation */
+.boxImage:hover {
+   border-radius: 1.5rem;
+   transition: 0.4s;
+}
+
+.boxImgText {
+   width: 100%;
+   padding: 0 0 2rem 2rem;
+   height: 100%;
+   opacity: 0;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background: rgba(0, 0, 0, 0.623);
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   transition: 0.4s;
+}
+
+.boxImgText:hover {
+   border-radius: 1.5rem;
+   transition: 0.4s;
+   opacity: 1;
+}
+
+.boxImgText > * {
+   transform: translateY(1.5rem);
+   transition: transform .4s;
+}
+
+.boxImgText:hover > * {
+   transform: translateY(0);
+}
+
+/* project name */
+.boxName {
+   text-align: center;
+   margin-top: 2rem;
+}
+
+.boxTitle {
+   font-size: 0.8125rem;
+   letter-spacing: 1px;
+   font-weight: 700;
+   color: var(--secondaryColor);
+   text-transform: uppercase;
+}
+
+/* project language used tag */
+.boxTools {
+   margin: 0.2rem 0;
+}
+
+.boxTools small {
+   font-family: "Inter", sans-serif;
+   background: var(--lightGray);
+   padding: 0.3rem 0.4rem;
+   border-radius: 1rem;
+   font-size: 0.6rem;
+   font-weight: 600;
+   letter-spacing: 1px;
+   color: var(--offWhite);
+}
+
+.boxDescription {
+   font-size: 2rem;
+   letter-spacing: -1.2px;
+   line-height: 1.375;
+   font-weight: 700;
+   cursor: pointer;
+   color: #000;
+}
+
+body[data-theme="dark"] .boxDescription {
+   color: #fff;
+}
+
+.boxDescription:hover,
+body[data-theme="dark"] .boxDescription:hover {
+   color: var(--secondaryColor);
+}
+
+.boxBtn {
+   margin: 1.5rem auto 0 auto;
+   justify-content: space-around;
+}
+
+.boxBtn a {
+   padding: 0.8rem 1.7rem;
+   margin: 0 0.8rem;
+}
+
+/* ---------------------- Section: Resume BTN Styling ---------------------- */
+.resume {
+   padding-top: 7rem;
+   text-align: center;
+}
+
+.resume a,
+.boxBtn a {
+   color: #3d3d3d;
+   outline: 1px solid #969595;
+}
+
+/* resume dark theme */
+body[data-theme="dark"] .resume a,
+body[data-theme="dark"] .boxBtn a {
+   color: var(--white);
+   outline: 1px solid #727272;
+}
+
+.resume a:hover,
+.boxBtn a:hover,
+body[data-theme="dark"] .resume a:hover,
+body[data-theme="dark"] .boxBtn a:hover {
+   outline: 1px solid var(--secondaryColor);
+   background: var(--secondaryColor);
+}
+
+/* ---------------------- Section: PopUp styling ---------------------- */
+/* entire pop up */
+.overlay {
+   display: none;
+   position: fixed;
+   z-index: 2;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: #426430;
+   padding: 1.2rem 0 0 0;
+   color: var(--white) !important;
+   overflow: auto;
+}
+
+/* ---------------------- PopUp Animation (Delete this code to remove animation) ---------------------- */
+/* ------------------- Slide in and Slide out Animation -------------------- */
+.overlay.open {
+   display: block;
+   animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+   0% {
+      transform: translateY(50%);
+      opacity: 0;
+   }
+   100% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+.overlay.close {
+   animation: slideOut 0.5s forwards;
+}
+
+@keyframes slideOut {
+   0% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+   100% {
+      transform: translateY(50%);
+      opacity: 0;
+   }
+}
+
+.popUp {
+   opacity: 0;
+   transition: opacity 0.3s ease-in-out;
+   pointer-events: none;
+   width: 400px;
+   max-width: 90%;
+}
+
+.overlay.open .popUp {
+   opacity: 1;
+   pointer-events: auto;
+}
+/* ---------------------- PopUp Animation ---------------------- */
+
+#popUp .head,
+#popUp .head .aboutLogo {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+#popUp .head .closeModalButton .icon {
+   font-size: 1.5rem;
+   cursor: pointer;
+   color: var(--whiteOpacity);
+}
+
+#popUp h2,
+#popUp p {
+   text-align: left;
+   padding: 0;
+}
+
+#popUp h2 {
+   margin-bottom: 0.5rem;
+}
+
+#popUp .jobTitle {
+   margin-top: 0;
+}
+
+#popUp p img {
+   display: inline-block;
+   width: 1.6rem;
+}
+
+#popUp .contentBottom:nth-child(2) img:nth-child(3) {
+   width: 1.8rem;
+}
+
+#popUp .popUpContent {
+   display: flex;
+   gap: 7rem;
+   justify-content: center;
+   align-items: center;
+   padding: 4rem 0;
+}
+
+#popUp .popUpContent .contentTop {
+   width: 100%;
+   flex: 1;
+}
+
+#popUp .popUpContent .contentTop img {
+   width: 100%;
+}
+
+#popUp .contentBottom {
+   flex: 2;
+}
+
+#popUp .contentBottom p:nth-child(2),
+#popUp .contentBottom p:nth-child(3),
+#popUp .contentBottom p:nth-child(4),
+#popUp .jobTitle {
+   margin-bottom: 2rem;
+}
+
+#popUp .contentBottom .email {
+   color: var(--white);
+   font-size: 1.2rem;
+   font-weight: 700;
+   cursor: pointer;
+}
+
+/* #popUp .popUpFollow {
+   margin: 1.8rem 0 1rem 0;
+} */
+
+#popUp .popUpsocial {
+   margin-top: 2.8rem;
+   width: 8rem;
+}
+
+#popUp .popUpsocial ul {
+   padding: 0;
+   display: flex;
+   justify-content: space-between;
+}
+
+#popUp .popUpsocial ul li {
+   /* border-left: 1px solid var(--white); */
+   padding: 0 1rem;
+}
+
+#popUp .popUpsocial ul li:first-child {
+   /* border-left: none; */
+   padding-left: 0;
+}
+
+#popUp .popUpsocial ul li a {
+   color: var(--white);
+}
+
+/* ---------------------- Section Main footer styling ---------------------- */
+#mainFooter {
+   padding: 5rem 7rem 0 7rem;
+   text-align: center;
+}
+
+#mainFooter .contentTop {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* footer let's work together */
+#mainFooter p {
+   display: inline-block;
+   margin: 0;
+}
+
+/* footer green dot */
+#mainFooter span {
+   display: inline;
+   font-size: 4.5rem;
+   padding-right: 0.5rem;
+}
+
+/* footer big text */
+#mainFooter h2 {
+   font-size: 3rem;
+   letter-spacing: -1.8px;
+   line-height: 1.2;
+}
+
+/* footer social links */
+#mainFooter .social {
+   text-align: center;
+   padding-top: 2.75rem;
+   padding-bottom: 3.75rem;
+}
+
+#mainFooter .social ul {
+   padding: 0;
+   display: flex;
+   justify-content: center;
+}
+
+#mainFooter .social ul li {
+   /* border-left: 1px solid #969595; */
+   padding: 0 2rem;
+}
+
+/* body[data-theme="dark"] #mainFooter .social ul li {
+   border-left: 1px solid var(--white);
+} */
+
+#mainFooter .social ul li:first-child {
+   border-left: none;
+   padding-left: 0;
+}
+
+body[data-theme="dark"] #mainFooter .social ul li:first-child {
+   border-left: none;
+   padding-left: 0;
+}
+
+#mainFooter .social ul li a {
+   color: var(--secondaryColor);
+   transition: all 0.4s;
+}
+
+#mainFooter .social ul li a i,
+#popUp .popUpsocial ul li a i,
+#sticky-sidebar a i {
+   transition: all 0.4s;
+}
+
+#mainFooter .social ul li a i:hover,
+#popUp .popUpsocial ul li a i:hover {
+   transform: translateY(-10px) rotate(-20deg);
+   transition: all 0.4s;
+}
+
+/* ---------------------- Section: Sub footer styling ---------------------- */
+#subFooter {
+   padding: 2rem 0 3.75rem 0;
+}
+
+#subFooter p {
+   letter-spacing: normal;
+   display: block;
+}
+
+/* ---------------------- Showcase Page ---------------------- */
+#showcase {
+   padding-top: 0;
+}
+
+/* ---------------------- Contact Page ---------------------- */
+#contact .contentTop .heading {
+   margin: 0;
+}
+#contact .contentBottom p a {
+   font-weight: 700;
+   cursor: pointer;
+}
+
+form {
+   margin-top: 3rem;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   width: 100%;
+}
+
+form .senderInfo {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 1rem;
+}
+
+form input,
+form textarea {
+   border: 0.5px solid #3f573221;
+   outline: none;
+   padding: 1rem;
+   font-size: 1.2125rem;
+   font-family: "Inter", sans-serif;
+   color: #252525;
+   background: #3f573265;
+   border-radius: 0.5rem;
+}
+
+body[data-theme="dark"] form input,
+body[data-theme="dark"] form textarea {
+   color: #dadada;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+   font-family: "Inter", sans-serif;
+   color: #252525;
+   font-size: 1.2125rem;
+}
+
+body[data-theme="dark"] form input::placeholder,
+body[data-theme="dark"] form textarea::placeholder {
+   color: #969696;
+}
+
+textarea {
+   margin-bottom: 20px;
+   width: 100%;
+   height: 25rem;
+   resize: none;
+}
+
+form input:focus,
+form textarea:focus {
+   border: 0.5px solid var(--secondaryColor);
+   transition: 0.5s all linear;
+}
+
+form .formButton {
+   text-align: center;
+}
+
+form input.send-btn {
+   border: none;
+   outline: none;
+   display: inline-block;
+   background: var(--mainColor);
+   width: max-content;
+   color: var(--white);
+   padding: 1.45rem 2.5rem;
+   border-radius: 5rem;
+   text-transform: uppercase;
+   font-weight: 700;
+   font-size: 0.9rem;
+   letter-spacing: 1.63px;
+   transition: all 0.4s;
+   cursor: pointer;
+}
+
+form input.send-btn:hover {
+   background: var(--secondaryColor);
+   box-shadow: 0 32px 54px rgba(3, 3, 3, 0.12);
+   transform: translateY(-8px);
+   transition: all 0.4s;
+}
+
+body[data-theme="dark"] form input.send-btn:hover {
+   box-shadow: 0 32px 54px rgba(66, 117, 25, 0.562);
+}
+
+/* Netlify Recaptcha */
+.recaptcha {
+   margin: 0 auto 20px auto;
+}
+
+/* ---------------------------------- Sweet Alert Box ---------------------------------- */
+.swal-modal {
+   background: #426430c2;
+   border: none;
+   border-radius: 1rem;
+}
+
+.swal-text,
+.swal-title {
+   color: var(--white);
+}
+
+.swal-button-container {
+   margin: 0;
+}
+
+.swal-button {
+   padding: 1.1rem 2rem;
+   border-radius: 0.5rem;
+   background: var(--secondaryColor);
+   border: none;
+   text-shadow: none;
+}
+
+.swal-button:not([disabled]):hover {
+   background: #648553;
+}
+
+.swal-button:focus {
+   outline: none;
+   box-shadow: none;
+}
+
+/* ------------------------ White overlay on success icon ------------------------ */
+.swal-icon--success:before,
+.swal-icon--success:after,
+.swal-icon--success__hide-corners {
+   display: none;
+}
+
+/* ---------------------- light and dark theme toggle btn ---------------------- */
+#jstoggle {
+   margin-left: 1.5rem;
+}
+
+.checkbox {
+   opacity: 0;
+   position: absolute;
+}
+
+.checkbox-label {
+   background-color: var(--mainColor);
+   width: 3.125rem;
+   height: 1.625rem;
+   border-radius: 50px;
+   position: relative;
+   padding: 0.313rem;
+   cursor: pointer;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.fa-moon {
+   color: #f39c12;
+}
+
+.fa-sun {
+   color: #f1c40f;
+}
+
+/* .checkbox-label .ball {
+   background-color: var(--white);
+   width: 1.375rem;
+   height: 1.375rem;
+   position: absolute;
+   right: 1.61rem;
+   top: 0.125rem;
+   border-radius: 50%;
+   transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+   transform: translateX(1.42rem);
+} */
+
+.checkbox-label .ball {
+   background-color: var(--white);
+   width: 1.375rem;
+   height: 1.375rem;
+   position: absolute;
+   right: 0.125rem;
+   top: 0.125rem;
+   border-radius: 50%;
+   transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+   transform: translateX(-1.5rem);
+}
+
+/* ---------------------- Sticky Socials icon ---------------------- */
+#sticky-sidebar {
+   display: flex;
+   flex-direction: column;
+   z-index: 1;
+   justify-content: center;
+   align-items: center;
+   position: fixed;
+   bottom: 40%;
+   border-top-right-radius: 20px;
+   border-bottom-right-radius: 20px;
+   background-color: var(--mainColor);
+}
+
+#sticky-sidebar a {
+   padding: 0.938rem 0.625rem 0.938rem 0.438rem;
+   color: var(--white);
+}
+
+#sticky-sidebar a i:hover {
+   transform: rotate(-25deg);
+   transition: all 0.4s;
+}
+
+/* ---------------------------------- Scroll to Top ---------------------------------- */
+.scroll-top {
+   position: fixed;
+   bottom: -100rem;
+   right: 2rem;
+   z-index: 2;
+   cursor: pointer;
+   width: 2.5rem;
+   height: 2.5rem;
+   border-radius: 100%;
+   color: var(--white);
+   border: 1.5px solid var(--mainColor);
+   background: var(--mainColor);
+   transition: all 0.4s;
+}
+
+.scroll-top:hover {
+   color: var(--white);
+   border: 1.5px solid var(--secondaryColor);
+   background: var(--secondaryColor);
+   box-shadow: 0 9px 14px 1px rgba(3, 3, 3, 0.192);
+   transform: translateY(-8px);
+   transition: all 0.4s;
+}
+
+body[data-theme="dark"] .scroll-top:hover {
+   box-shadow: 0 9px 14px 1px rgb(66, 117, 25);
+}
+
+.scroll-top i {
+   padding: 0.7rem 0.7rem 0.7rem 0.85rem;
+}
+
+.scroll-active {
+   bottom: 4rem;
+   transition: 0.4s all ease-in-out;
+}

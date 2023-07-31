@@ -1,0 +1,472 @@
+/* ---------------------------------- Responsive Media Queries---------------------------------- */
+
+/******************************************
+/* Smartphone
+/*******************************************/
+@media screen and (max-width: 993px) {
+   .mobile-menu-icon {
+      display: block;
+   }
+
+   .contentBottom {
+      width: 100%;
+   }
+   .navbar {
+      position: absolute;
+      top: 0%;
+      right: 110%;
+      z-index: 2;
+      /* right: 100%; */
+      width: 20rem;
+      height: 120vh;
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      padding: 5rem 2rem;
+      transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+      overflow: auto;
+   }
+
+   body[data-theme="dark"] .navbar {
+      background: #000;
+   }
+
+   .navbar li {
+      padding: 1.5rem 1.8rem;
+      display: block;
+      width: 100%;
+      text-align: left;
+   }
+
+   /* .checkbox:checked + .checkbox-label .ball {
+      transform: translateX(1.48rem);
+   } */
+
+   .darkTheme {
+      margin: 2rem 0 0 2rem;
+      align-self: flex-start;
+   }
+
+   .open-menu {
+      right: 0;
+      transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+   }
+}
+
+@media screen and (max-width: 575px) and (min-height: 575px) {
+   .container {
+      margin: 0 auto;
+      width: 90%;
+   }
+
+   .container2 {
+      width: 93%;
+   }
+
+   .container3 {
+      width: 95%;
+   }
+
+   .btn {
+      padding: 1.3rem 1.5rem;
+      letter-spacing: 0.8px;
+   }
+
+   #hero {
+      margin: 6rem auto 8rem auto;
+   }
+
+   .heroContent .contentBottom h1.big-text {
+      font-size: calc(1.5rem + 3vw);
+      margin: 2rem 0;
+   }
+
+   .heroContent .heroButton {
+      gap: 1.5rem;
+   }
+
+   #Intro {
+      padding-top: 0;
+   }
+
+   .introContent p,
+   #contact .contentBottom p,
+   form input,
+   form textarea,
+   form input::placeholder,
+   form textarea::placeholder {
+      padding: 0;
+      font-size: calc(1.25625rem + 0.075vw);
+   }
+
+   /* ---------------------- Section: Projects Styling ---------------------- */
+   #projects {
+      padding-top: 1.875rem;
+   }
+
+   #projects .contentTop .heading,
+   #showcase .contentTop .heading,
+   #contact .contentTop .heading {
+      font-size: calc(1.925rem + 2.1vw);
+      margin-bottom: 0;
+   }
+
+   /* progect arraingment */
+   .grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+   }
+
+   .boxDescription {
+      font-size: calc(1.325rem + 0.9vw);
+   }
+
+   /* ---------------------- Section POP up styling ---------------------- */
+   #popUp .popUpContent {
+      flex-direction: column;
+      gap: 2rem;
+   }
+
+   #popUp .popUpContent .contentTop {
+      width: 80%;
+   }
+
+   #popUp p,
+   #popUp .popUpEmail #emailMe {
+      font-size: calc(1.25625rem + 0.075vw);
+   }
+
+   #popUp .popUpsocial ul li {
+      padding: 0 .9rem;
+   }
+
+   /* ---------------------- Section: Resume BTN Styling ---------------------- */
+   .resume {
+      padding-top: 5rem;
+   }
+
+   /* ---------------------- Section Main footer styling ---------------------- */
+   #mainFooter {
+      padding: 4rem 0 1rem 0;
+   }
+
+   #mainFooter h2,
+   #popUp h2 {
+      font-size: calc(1.425rem + 2.1vw);
+   }
+
+   #mainFooter .social {
+      padding-bottom: 2.5rem;
+   }
+
+   #mainFooter .social ul li {
+      padding: 0 1.2rem;
+   }
+
+   #mainFooter .social ul li:first-child {
+      padding-left: 1.2rem;
+   }
+
+   body[data-theme="dark"] #mainFooter .social ul li:first-child {
+      padding-left: 1.2rem;
+   }
+
+   #mainFooter .social ul li a i,
+   #popUp .popUpsocial ul li a i {
+      font-size: 1.6rem;
+   }
+
+   /* ---------------------- Contact Page ---------------------- */
+   form .senderInfo {
+      grid-template-columns: repeat(1, 1fr);
+   }
+
+   form input,
+   form textarea {
+      padding: 0.8rem;
+   }
+
+   #sticky-sidebar {
+      display: none;
+   }
+
+   .scroll-top {
+      right: 1rem;
+   }
+}
+
+/******************************************
+/* Tablet
+/*******************************************/
+@media (min-width: 576px) and (max-width: 768px) {
+   .container {
+      margin: 0 auto;
+      width: 93%;
+   }
+
+   .container2 {
+      width: 93%;
+   }
+
+   .container3 {
+      width: 85%;
+   }
+
+   #hero {
+      margin: 6rem auto 8rem auto;
+   }
+
+   .heroContent .contentBottom h1.big-text {
+      font-size: calc(1.5rem + 3vw);
+      margin: 2rem 0 4rem 0;
+   }
+
+   .heroContent .heroButton {
+      gap: 2rem;
+   }
+
+   #Intro {
+      padding-top: 0;
+   }
+
+   /* ---------------------- Section: Projects Styling ---------------------- */
+   #projects {
+      padding-top: 2rem;
+   }
+
+   #projects .contentTop .heading,
+   #showcase .contentTop .heading,
+   #contact .contentTop .heading {
+      font-size: calc(1.425rem + 2.1vw);
+   }
+
+   /* progect arraingment */
+   .grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem 1rem;
+   }
+
+   .boxDescription {
+      font-size: calc(1.325rem + 0.9vw);
+   }
+
+   /* ---------------------- Section POP up styling ---------------------- */
+   #popUp .popUpContent {
+      flex-direction: column;
+      gap: 2rem;
+   }
+
+   #popUp .popUpContent .contentTop {
+      width: 52%;
+   }
+
+   #popUp p,
+   #popUp .popUpEmail #emailMe,
+   #contact .contentBottom p,
+   form input,
+   form textarea,
+   form input::placeholder,
+   form textarea::placeholder {
+      font-size: calc(1.25625rem + 0.075vw);
+   }
+
+   /* ---------------------- Section: Resume BTN Styling ---------------------- */
+   .resume {
+      padding-top: 6rem;
+   }
+
+   /* ---------------------- Section Main footer styling ---------------------- */
+   #mainFooter {
+      padding: 4rem 0 1rem 0;
+   }
+
+   #mainFooter h2,
+   #popUp h2 {
+      font-size: calc(1.425rem + 2.1vw);
+   }
+
+   #mainFooter .social ul li a i,
+   #popUp .popUpsocial ul li a i {
+      font-size: 1.8rem;
+   }
+
+   /* ---------------------- Contact Page ---------------------- */
+   form .senderInfo {
+      grid-template-columns: repeat(1, 1fr);
+   }
+
+   #sticky-sidebar {
+      display: none;
+   }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+   .container {
+      margin: 0 auto;
+      width: 93%;
+   }
+
+   .container2 {
+      width: 90%;
+   }
+
+   .container3 {
+      width: 85%;
+   }
+
+   #hero {
+      margin: 6rem auto 8rem auto;
+   }
+
+   .heroContent .contentBottom h1.big-text {
+      font-size: calc(1.5rem + 3vw);
+      margin: 2rem 0 4rem 0;
+   }
+
+   .heroContent .heroButton {
+      gap: 2rem;
+   }
+
+   /* ---------------------- Section: Projects Styling ---------------------- */
+   #projects {
+      padding-top: 2rem;
+   }
+
+   #projects .contentTop .heading,
+   #showcase .contentTop .heading {
+      font-size: calc(1.425rem + 2.1vw);
+   }
+
+   /* progect arraingment */
+   .grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem 1rem;
+   }
+
+   .boxDescription {
+      font-size: calc(1.325rem + 0.9vw);
+   }
+
+   /* ---------------------- Section POP up styling ---------------------- */
+   #popUp .popUpContent {
+      flex-direction: column;
+      gap: 2rem;
+   }
+
+   #popUp .popUpContent .contentTop {
+      width: 35%;
+   }
+
+   #popUp p,
+   #popUp .popUpEmail #emailMe {
+      font-size: calc(1.25625rem + 0.075vw);
+   }
+
+   /* ---------------------- Section Main footer styling ---------------------- */
+   #mainFooter {
+      padding: 4rem 0 1rem 0;
+   }
+
+   #mainFooter h2,
+   #popUp h2 {
+      font-size: calc(1.425rem + 2.1vw);
+   }
+
+   #mainFooter .social ul li a i,
+   #popUp .popUpsocial ul li a i {
+      font-size: 1.8rem;
+   }
+
+   #sticky-sidebar {
+      display: none;
+   }
+}
+
+/******************************************
+/* Small Desktops
+/*******************************************/
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+   .container {
+      margin: 0 auto;
+      width: 93%;
+   }
+
+   .container2 {
+      width: 90%;
+   }
+
+   .container3 {
+      width: 85%;
+      /* width: 70%; */
+   }
+
+   /* ---------------------- Section POP up styling ---------------------- */
+   #popUp .popUpContent {
+      flex-direction: column;
+      gap: 2rem;
+   }
+
+   #popUp .popUpContent .contentTop {
+      width: 40%;
+   }
+
+   /* ---------------------- Section Main footer styling ---------------------- */
+   #mainFooter {
+      padding: 4rem 0 1rem 0;
+   }
+}
+
+/******************************************
+/* Medium Desktops
+/*******************************************/
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+   .container {
+      margin: 0 auto;
+      width: 93%;
+   }
+
+   .container2 {
+      width: 90%;
+   }
+
+   .container3 {
+      width: 75%;
+   }
+}
+
+@media (min-width: 1440px) and (max-width: 1514px) {
+   .container2 {
+      width: 72%;
+   }
+
+   .container3 {
+      width: 65%;
+   }
+}
+
+/******************************************
+/* Large Desktops & above
+/*******************************************/
+@media screen and (min-width: 2000px) {
+   /* ---------------------- Layout Styling ---------------------- */
+   /* Dark Theme bg*/
+   body[data-theme="dark"] .background {
+      background: url(../assets/img/main/anime-pattern-dark-theme.svg) no-repeat
+         center/cover fixed;
+      width: 100%;
+   }
+
+   /* Light Theme bg*/
+   body[data-theme="light"] .background {
+      background: url(../assets/img/main/anime-pattern-light-theme.svg)
+         no-repeat center/cover fixed;
+      width: 100%;
+   }
+}
+
+/* Mobile: Typically around 767px
+Tablet: Typically around 768px to 1023px
+Tablet landscape: Typically around 768px to 1024px width.
+Small Desktop: Typically around 1024px to 1279px
+Medium Desktop: Typically around 1280px to 1439px
+Large Desktop: Typically around 1440px and above */
